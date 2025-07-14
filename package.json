@@ -1,0 +1,17 @@
+{
+  "name": "oopswrongtab",
+  "version": "0.1.0-preview",
+  "description": "**OopsWrongTab** is a privacy-first browser extension that automatically redirects awkward, distracting, or unprofessional browser tabs to a safe page when you're in a meeting or screen sharing — saving you from embarrassing moments with a single smart redirect.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Kishon",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kishon45229/OopsWrongTab.git"
+  }
+}

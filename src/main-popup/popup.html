@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="popup-container">
+        <header class="popup-header">
+            <div class="header-left">
+                <div class="logo">
+                    <span class="logo-text">OopsWrongTab</span>
+                    <span class="logo-version">Preview · v1.0.0</span>
+                </div>
+            </div>
+            <div class="header-right">
+                <div class="header-actions">
+                    <button class="header-btn manage-domains-btn" id="manageDomainsBtn" title="Manage Blocked Domains">
+                        <span class="btn-text">Domains</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <div class="status-bar" id="statusIndicator">
+            <div class="status-info">
+                <span class="status-dot"></span>
+                <span class="status-text">Active</span>
+            </div>
+            <label class="status-toggle" title="Enable/Disable Protection">
+                <input type="checkbox" id="enabledToggle">
+                <span class="status-toggle-slider"></span>
+            </label>
+        </div>
+
+        <main class="popup-main">
+            <div class="working-hours-section">
+                <div class="section-header">
+                    <span class="section-title">Working Hours Protection</span>
+                    <label class="mini-toggle">
+                        <input type="checkbox" id="workingHoursToggle">
+                        <span class="mini-slider"></span>
+                    </label>
+                </div>
+
+                <div class="working-hours-description">
+                    <p>Only activate protection during your work schedule</p>
+                </div>
+
+                <div class="working-hours-content" id="workingHoursContent">
+                    <div class="schedule-section">
+                        <div class="schedule-header">
+                            <span class="schedule-label"><i class="fas fa-clock"></i> Daily Schedule</span>
+                        </div>
+                        <div class="time-controls" id="timeControls">
+                            <div class="time-range">
+                                <div class="time-input-group">
+                                    <label class="time-label">From</label>
+                                    <input type="time" id="startTime" class="time-input">
+                                </div>
+                                <div class="time-separator">to</div>
+                                <div class="time-input-group">
+                                    <label class="time-label">Until</label>
+                                    <input type="time" id="endTime" class="time-input">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="weekdays-section">
+                        <div class="schedule-header">
+                            <span class="schedule-label"><i class="fas fa-calendar-alt"></i> Work Days</span>
+                        </div>
+                        <div class="weekdays-selector" id="weekdaysControls">
+                            <div class="weekday-buttons" id="weekdayButtons">
+                                <!-- Weekday buttons -->
+                            </div>
+                            <div class="weekdays-quick-actions">
+                                <button type="button" class="quick-action-btn" id="selectWeekdays">Weekdays</button>
+                                <button type="button" class="quick-action-btn" id="selectWeekend">Weekend</button>
+                                <button type="button" class="quick-action-btn" id="selectAll">All Days</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="schedule-preview">
+                        <div class="preview-header">
+                            <span class="schedule-label"><i class="fas fa-clipboard-list"></i> Current Status</span>
+                        </div>
+                        <div class="status-preview" id="scheduleStatus">
+                            <span class="status-text">Protection is active during weekdays, 9:00 AM - 5:00 PM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer class="popup-footer">
+            <button type="button" class="footer-btn" id="buyMeCoffeeBtn">
+                <span class="footer-icon">
+                    <i class="fas fa-mug-hot"></i>
+                </span>
+                <span class="footer-text">Buy me a Coffee</span>
+            </button>
+            <button type="button" class="footer-btn" id="githubBtn">
+                <span class="footer-icon">
+                    <i class="fab fa-github"></i>
+                </span>
+                <span class="footer-text">GitHub</span>
+            </button>
+            <button type="button" class="footer-btn" id="helpBtn">
+                <i class="fas fa-question-circle"></i>
+                <span class="footer-text">Help</span>
+            </button>
+        </footer>
+    </div>
+
+    <script type="module" src="popup.js"></script>
+    <script type="module" src="../config/config.js"></script>
+    <script type="module" src="../domain-popup/domain-modal.js"></script>
+    <script type="module" src="../utils/storage.js"></script>
+    <script type="module" src="../utils/date.js"></script>
+    <script type="module" src="../utils/domain.js"></script>
+    <script type="module" src="../utils/week-days.js"></script>
+    <script type="module" src="../utils/ui-updater.js"></script>
+    <script type="module" src="../ui/schedule-preview.js"></script>
+    <script type="module" src="../ui/working-hours.js"></script>
+</body>
+
+</html>

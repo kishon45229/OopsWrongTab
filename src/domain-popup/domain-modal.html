@@ -1,0 +1,31 @@
+<div class="domains-form">
+    <h2>Manage Blocked Domains</h2>
+    <div class="domains-content">
+        <div class="domains-header">
+            <span>Blocked Domains</span>
+            <div class="domains-plan-info">
+                <span class="domains-count"></span>
+            </div>
+        </div>
+        <div class="domains-add-section">
+            <div class="domains-instructions">
+                <div class="domains-instructions-title">
+                    💡 Enter domain name only (no https:// or www)
+                </div>
+            </div>
+            <div class="domains-add-container">
+                <div class="domains-input-wrapper">
+                    <input type="text" id="modalDomainInput" class="domains-input"
+                        placeholder="Enter domain name (e.g., youtube.com)">
+                    <div class="domains-validation-message" id="validationMessage"></div>
+                </div>
+                <button id="modalAddDomainBtn" class="domains-add-btn">+</button>
+            </div>
+        </div>
+        <div class="domains-list-container" id="modalDomainsList"></div>
+    </div>
+    <div class="domains-actions">
+        <button class="domains-btn-cancel" id="cancelDomains">Cancel</button>
+        <button class="domains-btn-close" id="closeDomains">Done</button>
+    </div>
+</div>
