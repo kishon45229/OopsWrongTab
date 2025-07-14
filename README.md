@@ -2,6 +2,8 @@
 
 **OopsWrongTab** is a privacy-first browser extension that automatically redirects awkward, distracting, or unprofessional tabs to a safe fallback page when you're in a meeting or screen sharing — protecting your reputation with one smart redirect.
 
+> Visit the official site: [oopswrongtab.net](https://oopswrongtab.net)
+
 > **Currently in Preview:** This is the initial version (v0.1.0-preview). Redirects are currently set to [Google Calendar](https://calendar.google.com) by default. Future updates will include customizable redirect URLs, smart detection, and more.
 
 ---
