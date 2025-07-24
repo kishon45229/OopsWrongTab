@@ -67,7 +67,7 @@ We do **not collect**, store, or transmit any browsing data.
 
 ---
 
-## Current Version: `v1.0.0-preview`
+## Current Version: `v1.0.1-Bug Fix Release`
 
 I'm actively improving OopsWrongTab based on your feedback. Stay tuned for updates and more features.
 
