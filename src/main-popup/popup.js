@@ -88,6 +88,12 @@ class PopupController {
       this
     );
     PopupController.#bindEvent(
+      "#workingHoursToggle",
+      "click",
+      this.preventWorkingHoursToggleWhenDisabled,
+      this
+    );
+    PopupController.#bindEvent(
       "#startTime",
       "change",
       this.handleTimeChange,
@@ -126,6 +132,23 @@ class PopupController {
     );
     PopupController.#bindEvent("#githubBtn", "click", this.openGitHub, this);
     PopupController.#bindEvent("#helpBtn", "click", this.openHelp, this);
+  }
+
+  /**
+   * Prevents enabling workingHoursToggle when enabledToggle is off.
+   * @param {Event} event
+   */
+  preventWorkingHoursToggleWhenDisabled(event) {
+    if (!this.#settings.enabled) {
+      event.preventDefault();
+      const infoMessage = document.getElementById("workingHoursInfo");
+      if (infoMessage) {
+        infoMessage.style.display = "inline";
+        setTimeout(() => {
+          infoMessage.style.display = "none";
+        }, 3000);
+      }
+    }
   }
 
   /**
