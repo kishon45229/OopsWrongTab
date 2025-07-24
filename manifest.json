@@ -1,14 +1,12 @@
 {
   "manifest_version": 3,
-  "name": "OopsWrongTab - Save Reputation, Stay Professional",
+  "name": "OopsWrongTab - Share your screen, not your secrets.",
   "version": "1.0.0",
   "description": "Privacy-first tab redirector that saves you from embarrassing moments during screen sharing",
   "permissions": [
     "tabs",
     "activeTab",
     "storage",
-    "alarms",
-    "identity",
     "webNavigation"
   ],
   "host_permissions": [

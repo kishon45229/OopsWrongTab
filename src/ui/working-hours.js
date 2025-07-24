@@ -14,6 +14,7 @@ export class WorkingHoursUI {
     const workingHoursContent = document.getElementById("workingHoursContent");
 
     workingHoursToggle.checked = controller.settings.workingHours.enabled;
+    workingHoursToggle.disabled = !controller.settings.enabled;
 
     if (controller.settings.workingHours.enabled) {
       workingHoursContent.classList.add("enabled");

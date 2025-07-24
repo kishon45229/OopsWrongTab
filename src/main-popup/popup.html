@@ -30,7 +30,7 @@
                 <span class="status-dot"></span>
                 <span class="status-text">Active</span>
             </div>
-            <label class="status-toggle" title="Enable/Disable Protection">
+            <label class="status-toggle" title="Enable/Disable Extension">
                 <input type="checkbox" id="enabledToggle">
                 <span class="status-toggle-slider"></span>
             </label>
@@ -40,10 +40,14 @@
             <div class="working-hours-section">
                 <div class="section-header">
                     <span class="section-title">Working Hours Protection</span>
-                    <label class="mini-toggle">
-                        <input type="checkbox" id="workingHoursToggle">
+                    <label class="mini-toggle" title="Enable/Disable Working Hours Protection">
+                        <input type="checkbox" id="workingHoursToggle" >
                         <span class="mini-slider"></span>
                     </label>
+                    <span id="workingHoursInfo" class="info-message"
+                        style="display: none; color: red; font-size: 12px; margin-left: 8px;">
+                        Enable protection first to use this option.
+                    </span>
                 </div>
 
                 <div class="working-hours-description">

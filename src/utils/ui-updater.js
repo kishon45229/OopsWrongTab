@@ -20,7 +20,15 @@ export class UIUpdater {
         controller.settings.enabled &&
         (!controller.settings.workingHours.enabled || isWorkingHours);
 
-      if (!controller.settings.workingHours.enabled && isWorkingHours) {
+      if (!controller.settings.enabled) {
+        UIUpdater.#setStatus(
+          statusText,
+          header,
+          statusIndicator,
+          "Protection Disabled",
+          false
+        );
+      } else if (!controller.settings.workingHours.enabled && isWorkingHours) {
         UIUpdater.#setStatus(
           statusText,
           header,
